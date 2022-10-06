@@ -27,7 +27,7 @@
         <input type ="text" id="form1_text" class="form-control" name="form1_text"> <br>
         </div>
     <div class="mb-3">
-        <input type="button"  onclick=" checkGuess()" value="Check the guess">
+        <input type="button" class="btn btn-danger" onclick=" checkGuess()" value="Check the guess">
       </div>  
     </form>
     <div class="container">
@@ -41,6 +41,7 @@
     
     let correct=0;
     let wrong=0;
+    count=0;
     function  checkGuess(){
     
         pwd=document.getElementById("form1_musician").value
@@ -48,15 +49,26 @@
     
         output=document.getElementById("result")
         if(pwd==guess){
+            count=0;
             correct=correct+1
             alert("You got it right")
         }
         else{
+            count=count+1;
             wrong=wrong+1
             alert("Wrong Musician")
         }
-    
+        if(count>=3){
+            if(wrong>=3){
+                openAlert();
+            }
+        }
         output.innerHTML=" Correct one's: "+correct+"  Wrong one's: "+wrong
+
+        function openAlert(){
+            alert("Sorry, game over.");
+        }
+    
     }
     let useImage=1;
     function swapImage(){
