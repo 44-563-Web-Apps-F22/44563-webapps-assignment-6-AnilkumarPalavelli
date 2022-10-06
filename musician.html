@@ -16,7 +16,11 @@
         <input type ="text" id="form1_text" name="form1_text"> <br>
     
         <input type="button" onclick=" checkGuess()" value="Check the guess">
+        
     </form>
+    <div class="container">
+        <img src="Antlions.jpeg" id="image" alt="Midges Image" width="100px" height="100px" onclick="swapImage()" >
+    </div>
     
     
     <p id="result">This text will be replaced </p>
@@ -42,9 +46,31 @@
     
         output.innerHTML=" Correct one's: "+correct+"  Wrong one's: "+wrong
     }
+    let useImage=1;
+    function swapImage(){
+        image=document.getElementById("image")
+             switch(useImage){
+                case 1:
+                    image.src="Antlions.jpeg";
+                    useImage=useImage+1;
+                    break;
+                case 2:
+                    image.src="earwigs.jpg";
+                    useImage=useImage+1;
+                    break;
+                case 3:
+                    image.src="Proturans.jpg";
+                    useImage=useImage+1;
+                    break;
+                default:
+                    break;
+             }
+    }
     
 
 </script>
+
+
 
 </body>
 </html>
