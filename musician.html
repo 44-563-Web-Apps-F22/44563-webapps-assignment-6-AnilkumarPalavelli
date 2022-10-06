@@ -18,14 +18,17 @@
 
     
     <form>
-        <label for="form1_musician">Enter the secret musician name </label>
-        <input type ="password" id="form1_musician" name="form1_musician" value="John Lennon"> <br>
-    
-        <label for="form1_text">Guess the musician</label>
+        <div class="mb-3">
+        <label for="form1_musician" >Enter the secret musician name </label>
+        <input type ="password" id="form1_musician"  name="form1_musician" value="John Lennon"> <br>
+    </div>
+    <div class="mb-3">
+        <label for="form1_text" >Guess the musician</label>
         <input type ="text" id="form1_text" name="form1_text"> <br>
-    
-        <input type="button" onclick=" checkGuess()" value="Check the guess">
-        
+        </div>
+    <div class="mb-3">
+        <input type="button"  onclick=" checkGuess()" value="Check the guess">
+      </div>  
     </form>
     <div class="container">
         <img src="Antlions.jpeg" id="image" alt="Antlions Image" width="100px" height="100px" onclick="swapImage()" >
